@@ -72,6 +72,8 @@
                     @else
                     <a href="{{ url('admin/login') }}">Admin Login</a>
                     <a href="{{ url('admin/register') }}">Admin Register</a>
+                    <a href="{{ url('owner/login') }}">Owner Login</a>
+                    <a href="{{ url('owner/register') }}">Owner Register</a>
 
                         <a href="{{ route('login') }}">Technician Login</a>
 
