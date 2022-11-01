@@ -32,7 +32,7 @@
                             allowfullscreen style="width: 100%; height: 100%;"></iframe>
                     </div>
                     <div class="col-md-3 offset-md-9 mt-5">
-                        <div class="float-right"><a href="#" class="btn btn-primary ">Next</a>
+                        <div class="float-right"><a href="{{url('owner/home-index')}}" class="btn btn-primary ">Next</a>
                         </div>
                     </div>
                 </div>

@@ -18,8 +18,12 @@ class CreateOwnersTable extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('address')->nullable();
-            $table->string('phone')->nullable();
             $table->string('email')->unique();
+            $table->string('phone')->nullable();
+            $table->string('suburb')->nullable();
+            $table->string('state')->nullable();
+            $table->string('postcode')->nullable();
+            $table->string('country')->nullable();
             $table->string('abn')->nullable();
             $table->string('years_of_operation')->nullable();
             $table->string('website')->nullable();
@@ -32,6 +36,9 @@ class CreateOwnersTable extends Migration
             $table->string('linkedin_links')->nullable();
             $table->enum('type',['hair','beauty','both'])->nullable();
             $table->enum('status',['enable','disable'])->default('enable');
+            $table->string('stripe_key')->nullable();
+            $table->string('stripe_cus_id')->nullable();
+            $table->enum('has_subscription',['No','Yes'])->default('No');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('auth_type')->default('owner');;
