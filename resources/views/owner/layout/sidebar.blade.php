@@ -26,9 +26,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{url('/owner/location')}}">
                 <img src="assets/images/icon4.png" alt="">
-                <span class="menu-title">Notifications</span>
+                <span class="menu-title">Location</span>
 
             </a>
         </li>
