@@ -7,6 +7,8 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
 
 class RegisterController extends Controller
 {
@@ -49,9 +51,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'business_name' => 'required|max:255',
+            'first_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:owners',
             'password' => 'required|min:6|confirmed',
+            'phone'=>'required|min:10|max:10|confirmed',
+            'address'=>'required|max:255',
         ]);
     }
 
@@ -64,6 +70,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return Owner::create([
+            'business_name' => $data['business_name'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'phone' => $data['phone'],
+            'address' => $data['address'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -89,4 +100,20 @@ class RegisterController extends Controller
     {
         return Auth::guard('owner');
     }
+
+    public function ownerRegister(Request $request)
+    {
+        $ownerregister = new Owner();
+        $ownerregister->business_name = $request->business_name;
+        $ownerregister->first_name = $request->first_name;
+        $ownerregister->last_name = $request->last_name;
+        $ownerregister->address = $request->address;
+        $ownerregister->phone = $request->phone;
+        $ownerregister->email = $request->email;
+        $ownerregister->password = bcrypt($request->password);
+        $ownerregister->save();
+        return redirect(url('/owner/home'));
+    }
+
+    
 }

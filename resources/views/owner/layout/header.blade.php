@@ -1,8 +1,8 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.jpg"
+        <a class="navbar-brand brand-logo" href="index.html"><img src="{{asset('owner/assets/images/logo.jpg')}}"
                 alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo.jpg"
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('owner/assets/images/logo.jpg')}}"
                 alt="logo" /></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -22,12 +22,12 @@
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item d-none d-lg-block full-screen-link">
                 <a class="nav-link">
-                    <img src="assets/images/icon9.png" alt="" style="width: 22px;">
+                    <img src="{{asset('owner/assets/images/icon9.png')}}" alt="" style="width: 22px;">
                 </a>
             </li>
             <li class="nav-item d-none d-lg-block full-screen-link">
                 <a class="nav-link">
-                    <img src="assets/images/icon8.png" alt="" style="width: 22px;">
+                    <img src="{{asset('owner/assets/images/icon8.png')}}" alt="" style="width: 22px;">
                 </a>
             </li>
 
@@ -43,7 +43,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
-                            <img src="assets/images/faces/face4.jpg" alt="image" class="profile-pic">
+                            <img src="{{asset('owner/assets/images/faces/face4.jpg')}}" alt="image" class="profile-pic">
                         </div>
                         <div
                             class="preview-item-content d-flex align-items-start flex-column justify-content-center">
@@ -55,7 +55,7 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
-                            <img src="assets/images/faces/face2.jpg" alt="image" class="profile-pic">
+                            <img src="{{asset('owner/assets/images/faces/face2.jpg')}}" alt="image" class="profile-pic">
                         </div>
                         <div
                             class="preview-item-content d-flex align-items-start flex-column justify-content-center">
@@ -137,7 +137,7 @@
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="nav-profile-img">
-                        <img src="assets/images/faces/face1.jpg" alt="image">
+                        <img src="{{asset('owner/assets/images/faces/face1.jpg')}}" alt="image">
                         <span class="availability-status online"></span>
                     </div>
 

@@ -35,7 +35,9 @@ Route::group(['prefix' => 'owner'], function () {
   Route::post('/logout', 'OwnerAuth\LoginController@logout')->name('logout');
 
   Route::get('/register', 'OwnerAuth\RegisterController@showRegistrationForm')->name('register');
-  Route::post('/register', 'OwnerAuth\RegisterController@register');
+  // Route::post('/register', 'OwnerAuth\RegisterController@register');
+  Route::post('/register', 'OwnerAuth\RegisterController@ownerRegister');
+
 
   Route::post('/password/email', 'OwnerAuth\ForgotPasswordController@sendResetLinkEmail')->name('password.request');
   Route::post('/password/reset', 'OwnerAuth\ResetPasswordController@reset')->name('password.email');
