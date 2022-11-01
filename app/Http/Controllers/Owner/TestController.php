@@ -17,9 +17,13 @@ class TestController extends Controller
     {
         return view('owner.choosetype');
     }
-    public function ownerSubscribe(Request $request, $type)
+    // public function ownerSubscribe(Request $request, $type)
+    // {
+    //     return view('owner.subscribe');
+    // }
+    public function subscribeOwner(Request $request, $type)
     {
-        echo $type; exit();
+        // echo $type; exit();
         return view('owner.subscribe');
     }
     public function saveType(Request $request)
