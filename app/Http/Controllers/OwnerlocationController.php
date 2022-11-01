@@ -42,14 +42,14 @@ class OwnerlocationController extends Controller
      return view('owner.edit_location',compact('edit_location'));
  }
 
- public function editlocations($id)
+ public function editlocations(Request $request, $id)
  {
     $edit_locations = Ownerlocation::find($id);
     $edit_locations->location = $request->location;
     $edit_locations->total_no_of_chair = $request->total_no_of_chair;
     $edit_locations->total_no_of_room = $request->total_no_of_room;
     $edit_locations->total_no_of_space = $request->total_no_of_space;
-    $edit_locations->save();
+    $edit_locations->update();
     return redirect('owner/location');
  }
 
