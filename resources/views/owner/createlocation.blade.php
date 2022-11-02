@@ -12,6 +12,7 @@
                         <div class="card col-md-12">
                             <form method="POST" action="{{url('/owner/location/save')}}" enctype="multipart/form-data">
                                 @csrf
+                                &nbsp;
                                 <div class="form-group"><label for="form_name">Add Location</label> <input type="text"
                                         name="location" placeholder="Enter Location" required="required" class="form-control" />
                                 </div>

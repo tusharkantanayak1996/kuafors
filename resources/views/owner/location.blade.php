@@ -7,7 +7,7 @@
         
         <div class="mx-4">
            
-            <a class="btn btn-primary" href="{{url('/owner/locations')}}" style="margin-top: 10px">Add Location</a>
+            <a class="btn btn-primary" href="{{url('/owner/locations')}}" style="margin-top: 10px; float: right;">Add Location</a>
             
         </div>
         <div class="card-body">
@@ -33,7 +33,7 @@
                         <td>{{$location->total_no_of_space}}</td>
                         <td> <a href="{{url('/owner/editlocation',$location->id)}}"
                             class="btn btn-success">Edit</a>
-                        |||<a href="{{url('/owner/delete/location',$location->id)}}"
+                        ||| <a href="{{url('/owner/delete/location',$location->id)}}"
                             class="btn btn-danger">Delete</a></span></td>
                         
                       </tr>  

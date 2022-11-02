@@ -33,7 +33,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{url('/owner/support')}}">
                 <img src="assets/images/icon5.png" alt="">
                 <span class="menu-title">Support Centre</span>
 
