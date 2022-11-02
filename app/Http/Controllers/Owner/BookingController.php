@@ -15,4 +15,8 @@ class BookingController extends Controller
     {
         return view('owner.ownerpayment');
     }
+    public function createProfile()
+    {
+        return view('owner.profile');
+    }
 }

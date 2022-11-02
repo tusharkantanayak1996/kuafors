@@ -19,6 +19,8 @@ Route::get('/booking-register','Owner\BookingController@bookingRegister');
 
 Route::get('/owner-payment','Owner\BookingController@ownerPayment');
 
+Route::get('/create-profile','Owner\BookingController@createProfile');
+
 
 
 //Location
