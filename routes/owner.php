@@ -9,6 +9,15 @@ Route::get('/home', function () {
 
     return view('owner.home');
 })->name('home');
+Route::get('/home-index','Owner\TestController@secondHome');
+Route::get('/choose-type','Owner\TestController@chooseType');
+Route::get('/choose-type/{type}/subscribe','Owner\TestController@subscribeOwner');
+// Route::get('/subscribe','Owner\TestController@ownerSubscribe');
+Route::post('/store-type','Owner\TestController@saveType');
+
+
+
+
 
 //Location
 Route::get('/location','OwnerlocationController@index');
