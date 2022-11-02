@@ -15,7 +15,9 @@ Route::get('/choose-type/{type}/subscribe','Owner\TestController@subscribeOwner'
 // Route::get('/subscribe','Owner\TestController@ownerSubscribe');
 Route::post('/store-type','Owner\TestController@saveType');
 
+Route::get('/booking-register','Owner\BookingController@bookingRegister');
 
+Route::get('/owner-payment','Owner\BookingController@ownerPayment');
 
 
 

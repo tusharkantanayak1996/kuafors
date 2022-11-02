@@ -8,63 +8,31 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <div class="row">
+                            @foreach($ownerplan as $plan)
                             <div class="col-md-4">
                                 <div class="pricing-area p-3">
                                     <div class="pr-img">
                                         <img src="{{ asset('owner/assets/images/chair1.png') }}" />
                                     </div>
-                                    <h3 class="mt-5">Basic</h3>
-
-                                    <p>Lorem ipsum dolor amet fh</p>
-                                    <p>Lorem ipsum dolor amet fh</p>
-
-
-                                    <div>
-                                        <span style="font-size: 40px">$199</span><br />
-                                        <small>Per month</small>
-                                    </div>
-                                    <br />
-                                    <button class="btn btn-primary">Subscribe</button>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="pricing-area p-3">
-                                    <div class="pr-img">
-                                        <img src="{{ asset('owner/assets/images/chair1.png') }}" />
-                                    </div>
-                                    <h3 class="mt-5">Basic</h3>
-
-                                    <p>Lorem ipsum dolor amet fh</p>
-                                    <p>Lorem ipsum dolor amet fh</p>
-
+                                    <h3 class="mt-5">{{$plan->name}}</h3>
+                                    @if($plan->type = 'month')
+                                    <p>28 Days</p>
+                                    @elseif($plan->type = 'year')
+                                    <p>365 Day</p>
+                                    @elseif($plan->type = 'day')
+                                    <p>1 Day</p>
+                                    @endif
 
                                     <div>
-                                        <span style="font-size: 40px">$199</span><br />
-                                        <small>Per month</small>
+                                        <span style="font-size: 40px">${{$plan->price}}</span><br />
+                                        <small>Per {{$plan->type}}</small>
                                     </div>
                                     <br />
-                                    <button class="btn btn-primary">Subscribe</button>
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="pricing-area p-3">
-                                    <div class="pr-img">
-                                        <img src="{{ asset('owner/assets/images/chair1.png') }}" />
-                                    </div>
-                                    <h3 class="mt-5">Basic</h3>
-
-                                    <p>Lorem ipsum dolor amet fh</p>
-                                    <p>Lorem ipsum dolor amet fh</p>
-
-
-                                    <div>
-                                        <span style="font-size: 40px">$199</span><br />
-                                        <small>Per month</small>
-                                    </div>
-                                    <br />
-                                    <button class="btn btn-primary">Subscribe</button>
-                                </div>
-                            </div>
+                            @endforeach
+                           
                         </div>
                     </div>
                 </div>

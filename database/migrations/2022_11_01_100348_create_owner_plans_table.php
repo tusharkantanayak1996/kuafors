@@ -19,6 +19,9 @@ class CreateOwnerPlansTable extends Migration
             $table->enum('type',['monthly','yearly'])->nullable();
             $table->decimal('price');
             $table->enum('location',['1','1-5','5+'])->nullable();
+            $table->string('description')->nullable();
+            $table->string('product_id')->nullable();
+            $table->string('price_id')->nullable();
             $table->timestamps();
         });
     }

@@ -48,8 +48,10 @@ class PlanController extends Controller
         ]);
 
         $product = $this->stripe->createProduct($request->name,$request->description);
-        
+        // dd($product);
         $price = $this->stripe->createPrice($request->price,$request->plan_type,$product);
+        // dd($price);
+
         //dd($request->description);
 
         $ownerplan = new OwnerPlan();

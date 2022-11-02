@@ -22,7 +22,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{url('owner/booking-register')}}">
                     <img src="assets/images/icon3.png" alt="">
                     <span class="menu-title">Booking Register</span>
 
