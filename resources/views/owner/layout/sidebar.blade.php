@@ -7,15 +7,30 @@
         <?php $owner = App\Owner::where('id', Auth::guard('owner')->user()->id)->first();
         ?>
         @if (@$owner->has_subscription == 'Yes')
-            <li class="nav-item">
-                <a class="nav-link" href="#">
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ url('/owner/my-profile') }}">
                     <img src="assets/images/icon1.png" alt="">
                     <span class="menu-title">My Profile</span>
+                </a>
+             
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/owner/staff-profile') }}">
+                    <img src="assets/images/icon1.png" alt="">
+                    <span class="menu-title">Staff Profile</span>
 
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ url('/owner/salon-gallery') }}">
+                    <img src="assets/images/icon1.png" alt="">
+                    <span class="menu-title">Salon Gallery</span>
+
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/owner/chair-availability') }}">
                     <img src="assets/images/icon2.png" alt="">
                     <span class="menu-title">Chair/Room Availability</span>
 

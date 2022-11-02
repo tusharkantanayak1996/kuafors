@@ -23,4 +23,8 @@ class BookingController extends Controller
     {
         return view('owner.profile');
     }
+    public function chairAvailability()
+    {
+        return view('owner.chairavailable');
+    }
 }

@@ -17,11 +17,16 @@ Route::post('/store-type','Owner\TestController@saveType');
 
 Route::get('/booking-register','Owner\BookingController@bookingRegister');
 
+//payment page
 Route::get('/owner-payment','Owner\BookingController@ownerPayment');
 
+//profile page
 Route::get('/create-profile','Owner\BookingController@createProfile');
-
 Route::get('/my-profile','Owner\BookingController@myProfile');
+
+Route::get('/chair-availability','Owner\BookingController@chairAvailability');
+
+
 
 
 
